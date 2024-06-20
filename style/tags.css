@@ -1,0 +1,23 @@
+*{
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+body{
+  margin: 0;
+}
+
+header{
+  height: 5vh;
+  width: 100%;
+  background-color: rgb(236, 123, 226);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+hr{
+  width: 80%;
+  color: black;
+  background-color: black;
+}
