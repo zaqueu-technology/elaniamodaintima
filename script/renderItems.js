@@ -1,4 +1,5 @@
 import { itemsArr } from "./items.js";
+import { turnModal } from "./modal.js";
 
 const items = document.querySelector('.items');
 
@@ -10,7 +11,9 @@ export function renderItems(){
           <div class="items__title">${element.title}<hr></div>
           
           <div class="items__content">
-            <img src="${element.picture}" class="items__picture" />
+            <div class="items__pictures__container">
+              <img src="${element.picture}" class="items__picture" />
+            </div>
             <div>Tamanhos disponíveis: P, M e G</div>
             <div class="items__icons">
               <i class='bx bxl-whatsapp'></i>
@@ -20,6 +23,13 @@ export function renderItems(){
         </div>
     `;
     items.appendChild(newItem);
+
+    let imgMod = newItem.querySelector('.items__picture');
+    imgMod.addEventListener('click', ()=>{
+    turnModal(`${element.picture}`, `${element.title}`);
   });
+  });
+
+  
 }
 
