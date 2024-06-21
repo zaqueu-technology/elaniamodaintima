@@ -1,1 +1,3 @@
-import 'boxicons';
+import { renderItems } from './renderItems.js';
+
+renderItems();
