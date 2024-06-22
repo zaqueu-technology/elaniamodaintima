@@ -47,6 +47,9 @@ export function generateFilter(){
     let name  = element.name;
     newItem.addEventListener('click', () =>{
 
+      filterList.style.display = 'none';
+      buttonDown = false;
+
       document.querySelectorAll('.filter__item').forEach(item => {
         item.classList.remove('filter__removed');
       });
