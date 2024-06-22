@@ -131,12 +131,17 @@
   color: rgb(4, 172, 4);
   font-size: xx-large;
   margin-right: 30px;
+  cursor: pointer;
+}
+.bxl-whatsapp:hover{
+  color: green;
 }
 .bx-heart{
   color: red;
   margin-bottom: 0px;
   margin-right: 4px;
   font-size: xx-large;
+  cursor: pointer;
 }
 .bx-heart:hover{
   color: blueviolet;
