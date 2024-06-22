@@ -2,6 +2,48 @@
   font-size: x-large;
   color: white;
 }
+.filter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+}
+.filter__button{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.filter__list{
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  list-style: none;
+  list-style-type: none;
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(161, 161, 164);
+  color: black;
+  margin-top: 0px;
+}
+.filter__list li{
+  background-color: #e2dbdb;
+  padding: 7px;
+  color: black;
+  border: 1px dashed;
+  cursor: pointer;
+}
+.filter__list li:hover{
+  background-color: #fff;
+}
+.filter__removed{
+  display: none;
+}
 
 .items-container{
   width: 100%;

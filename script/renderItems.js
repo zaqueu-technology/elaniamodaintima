@@ -3,8 +3,9 @@ import { turnModal } from "./modal.js";
 
 const items = document.querySelector('.items');
 
-export function renderItems(){
-  itemsArr.forEach(element => {
+export function renderItems(arr){
+  items.innerHTML = '';
+  arr.forEach(element => {
     let newItem = document.createElement('div');
     newItem.innerHTML = `
       <div class="items__element">

@@ -1,3 +1,8 @@
 import { renderItems } from './renderItems.js';
+import { generateFilter } from './filter.js'
+import { itemsArr } from './items.js';
 
-renderItems();
+document.addEventListener('DOMContentLoaded', ()=>{
+  renderItems(itemsArr);
+})
+generateFilter();
