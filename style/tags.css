@@ -3,7 +3,8 @@
   font-family: Montserrat;
   :focus{
     outline: none;
-  }
+  };
+  -webkit-tap-highlight-color: transparent;
 }
 
 body, html{

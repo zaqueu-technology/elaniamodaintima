@@ -127,6 +127,12 @@
   font-size: 12px;
   color: red;
 }
+button:active, button:focus,
+a:active, a:focus,
+.bx:active, .bx:focus {
+    background-color: transparent;
+    outline: none;
+}
 .bxl-whatsapp{
   color: rgb(4, 172, 4);
   font-size: xx-large;
