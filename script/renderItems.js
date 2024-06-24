@@ -20,7 +20,7 @@ export function renderItems(arr){
             <div>Tamanhos disponíveis: P, M e G</div>
             <div class="items__icons">
               <i class='bx bxl-whatsapp'></i>
-              <i class='bx bx-heart heart'></i>
+              <i class="bx ${element.class} heart'></i>
               <div class="item-likes__cont">12</div> 
             </div>
         </div>
@@ -44,10 +44,12 @@ function favorite(likes, element, arr){
     likes.classList.remove('bx-heart');
     likes.classList.add('bxs-heart');
     element.isFavorite = true;
+    element.class = 'bxs-heart';
   }else{
     likes.classList.remove('bxs-heart');
     likes.classList.add('bx-heart');
     element.isFavorite = false;
+    element.class = 'bx-heart';
   }
 
   localStorage.setItem('arrayItems', JSON.stringify(arr));

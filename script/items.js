@@ -4,6 +4,7 @@ class Item {
     this.picture = picture;
     this.category = category;
     this.isFavorite = false;
+    this.iconClass = 'bx-heart';
   }
 }
 

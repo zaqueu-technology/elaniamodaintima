@@ -4,5 +4,5 @@ import { itemsArr } from './items.js';
 
 document.addEventListener('DOMContentLoaded', ()=>{
   renderItems(itemsArr);
-})
+});
 generateFilter();
