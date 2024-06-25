@@ -17,9 +17,9 @@ export function renderItems(arr){
             <div class="items__pictures__container">
               <img src="${element.picture}" class="items__picture" />
             </div>
-            <div>Tamanhos disponíveis: P, M e G</div>
+            <div>${element.price} R$</div>
             <div class="items__icons">
-              <div class="whats__container"><i class='bx bxl-whatsapp'></i></div>
+              <div class="whats__container"><a href="https://wa.me/5584991458984?text=Olá! Dei uma olhada no catálogo e gostaria de saber mais sobre o produto ${element.title}"><i class='bx bxl-whatsapp'></i></div></a>
               <i class="bx ${element.iconClass} heart"></i>
             </div>
         </div>
@@ -45,10 +45,12 @@ function favorite(item, element){
     element.iconClass = 'bxs-heart';
     item.classList.remove('bx-heart');
     item.classList.add('bxs-heart');
+    element.isFavorite = true;
   }else{
     element.iconClass = 'bx-heart';
     item.classList.remove('bxs-heart');
     item.classList.add('bx-heart');
+    element.isFavorite = false;
   }
 
   localStorage.setItem('arrayItems', JSON.stringify(elements));
