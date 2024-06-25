@@ -18,6 +18,10 @@ const filterArr = [
   new Filter('Fios', 'fio'),
   new Filter('Calças', 'calça'),
   new Filter('Tangas', 'tanga'),
+  new Filter('Babydolls', 'babydoll'),
+  new Filter('Conjuntos', 'conjunto'),
+  new Filter('Pijamas', 'pijama'),
+  new Filter('Robes', 'robe'),
   new Filter('Favoritos', 'favorito')
 ];
 
