@@ -27,7 +27,8 @@ export let itemsArr = [
     new Item('Cuecaquinha 14', 'pictures/image-100055.jpeg', 'cueca'),
     new Item('Cueca 91', 'pictures/image-100055.jpeg', 'cueca'),
     new Item('Cueca 92', 'pictures/image-100055.jpeg', 'cueca'),
-    new Item('Cueca 93', 'pictures/image-100055.jpeg', 'cueca')
+    new Item('Cueca 93', 'pictures/image-100055.jpeg', 'cueca'),
+    new Item('Cueca 94', 'pictures/image-100055.jpeg', 'cueca')
 ];
 
 function itemsEqual(item1, item2) {
