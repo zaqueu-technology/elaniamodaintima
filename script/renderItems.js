@@ -2,12 +2,12 @@ import { itemsArr } from "./items.js";
 import { turnModal } from "./modal.js";
 
 const items = document.querySelector('.items');
-const elements = JSON.parse(localStorage.getItem('arrayItems')) || itemsArr;
+export let elements = JSON.parse(localStorage.getItem('arrayItems')) || itemsArr;
 console.log(elements);
 
-export function renderItems(){
+export function renderItems(arr){
   items.innerHTML = '';
-  elements.forEach((element) => {
+  arr.forEach((element) => {
     let newItem = document.createElement('div');
     newItem.innerHTML = `
       <div class="items__element">
