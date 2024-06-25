@@ -139,6 +139,12 @@ a:active, a:focus,
   margin-right: 30px;
   cursor: pointer;
 }
+.whats__container{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .bxl-whatsapp:hover{
   color: green;
 }
