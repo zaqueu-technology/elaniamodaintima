@@ -31,7 +31,7 @@ export function renderItems(arr){
             </div>
             <div>${priceDisplay}</div>
             <div class="items__icons">
-              <div class="whats__container"><a href="https://wa.me/5584991458984?text=Olá! Dei uma olhada no catálogo e gostaria de saber mais sobre o produto ${element.title}"><i class='bx bxl-whatsapp'></i></div></a>
+              <div class="whats__container"><a href="https://wa.me/5584999456493?text=Olá! Dei uma olhada no catálogo e gostaria de saber mais sobre o produto ${element.title}"><i class='bx bxl-whatsapp'></i></div></a>
               <i class="bx ${element.iconClass} heart"></i>
             </div>
         </div>
