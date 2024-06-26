@@ -141,7 +141,6 @@ localStorage.setItem('arrayItems', JSON.stringify(tempArr));
     }
   })
 } */
-console.log(cont);
 
 export function filterItems(category){
   if(category !== 'favorito'){

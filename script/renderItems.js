@@ -3,7 +3,6 @@ import { turnModal } from "./modal.js";
 
 const items = document.querySelector('.items');
 export let elements = JSON.parse(localStorage.getItem('arrayItems')) || itemsArr;
-console.log(elements);
 
 function shuffleArray(array) {
   let newArray = array.slice(); // Cria uma cópia do array
@@ -67,6 +66,5 @@ function favorite(item, element){
   }
 
   localStorage.setItem('arrayItems', JSON.stringify(elements));
-  console.log(JSON.parse(localStorage.getItem('arrayItems')));
 }
  

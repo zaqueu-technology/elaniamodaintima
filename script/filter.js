@@ -82,11 +82,9 @@ export function generateFilter(){
       } else if(element.name === 'favorito'){
         let filteredFavorites = filterItems('favorito');
         renderItems(filteredFavorites);
-        console.log(filteredFavorites);
       }else {
         const filteredItems = filterItems(element.category);
         renderItems(filteredItems);
-        console.log(filteredItems);
       }
     })
   })
