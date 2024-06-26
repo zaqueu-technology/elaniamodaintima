@@ -24,7 +24,7 @@ export function renderItems(arr){
     let newItem = document.createElement('div');
     newItem.innerHTML = `
       <div class="items__element">
-          <div class="items__title">${element.title}<hr></div>
+          <div class="items__title">${element.title.toUpperCase()}<hr></div>
           
           <div class="items__content">
             <div class="items__pictures__container">
