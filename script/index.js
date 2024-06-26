@@ -6,5 +6,3 @@ import { generateFilter } from './filter.js'
 }); */
 renderItems(elements);
 generateFilter();
-
-localStorage.clear();
