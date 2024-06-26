@@ -102,6 +102,7 @@ export let itemsArr = [
     new Item('Cueca box infantil poliamida', 'pictures/image-930055.jpeg', 'cueca', 7),
     new Item('Tanga microfibra', 'pictures/image-100.jpeg', 'tanga', 5.5),
     new Item('Calça infantil algodão', 'pictures/image-101.jpeg', 'calça', 5.7),
+    new Item('Conjunto microfibra', 'pictures/image-108.jpeg', 'conjunto', 22),
     new Item('Samba canção', 'pictures/image-114.jpeg', 'cueca', 15),
     new Item('Sutiã amamentação', 'pictures/image-1111.jpeg', 'sutiã', 23),
 ];
