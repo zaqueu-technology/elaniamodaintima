@@ -5,9 +5,19 @@ const items = document.querySelector('.items');
 export let elements = JSON.parse(localStorage.getItem('arrayItems')) || itemsArr;
 console.log(elements);
 
+function shuffleArray(array) {
+  let newArray = array.slice(); // Cria uma cópia do array
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+}
+
 export function renderItems(arr){
   items.innerHTML = '';
-  arr.forEach((element) => {
+  let shuffledArray = shuffleArray(arr);
+  shuffledArray.forEach((element) => {
     let price = element.price;
     let priceDisplay = (typeof price === 'number' && !isNaN(price)) ? `R$ ${price.toFixed(2).replace('.', ',')}` : 'Preço indisponível';
     
