@@ -8,6 +8,9 @@ console.log(elements);
 export function renderItems(arr){
   items.innerHTML = '';
   arr.forEach((element) => {
+    let price = element.price;
+    let priceDisplay = (typeof price === 'number' && !isNaN(price)) ? `R$ ${price.toFixed(2).replace('.', ',')}` : 'Preço indisponível';
+    
     let newItem = document.createElement('div');
     newItem.innerHTML = `
       <div class="items__element">
@@ -17,7 +20,7 @@ export function renderItems(arr){
             <div class="items__pictures__container">
               <img src="${element.picture}" class="items__picture" />
             </div>
-            <div>${element.price} R$</div>
+            <div>${priceDisplay}</div>
             <div class="items__icons">
               <div class="whats__container"><a href="https://wa.me/5584991458984?text=Olá! Dei uma olhada no catálogo e gostaria de saber mais sobre o produto ${element.title}"><i class='bx bxl-whatsapp'></i></div></a>
               <i class="bx ${element.iconClass} heart"></i>

@@ -22,6 +22,9 @@ const filterArr = [
   new Filter('Conjuntos', 'conjunto'),
   new Filter('Pijamas', 'pijama'),
   new Filter('Robes', 'robe'),
+  new Filter('Shorts', 'short'),
+  new Filter('Camisetas', 'camiseta'),
+  new Filter('Cinturitas', 'cinturita'),
   new Filter('Favoritos', 'favorito')
 ];
 
@@ -64,6 +67,8 @@ export function generateFilter(){
 
       filterList.style.display = 'none';
       buttonDown = false;
+      filterChevron.classList.remove('bx-chevron-up');
+      filterChevron.classList.add('bx-chevron-down');
 
       document.querySelectorAll('.filter__item').forEach(item => {
         item.classList.remove('filter__removed');

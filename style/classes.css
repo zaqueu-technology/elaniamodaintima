@@ -1,6 +1,13 @@
+.header{
+  height: auto;
+}
 .header__text{
   font-size: x-large;
   color: white;
+}
+.logo{
+  width: 100%px;
+  margin: 20px;
 }
 .filter{
   display: flex;
@@ -13,27 +20,21 @@
 .filter__button{
   padding: 5px;
   width: 215px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   cursor: pointer;
   background-color: rgb(246, 227, 243);
   border: none;
 }
 .filter__button:focus{
-  outline: none;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2); 
+  outline: none; 
+  background-color: rgb(246, 227, 243);
 }
 .filter__button:active{
-  background-color: inherit;
+  background-color: rgb(246, 227, 243);
 }
-.bx-chevron-down{
-  position: relative;
-  left: 70px;
-}
-.bx-chevron-up{
-  position: relative;
-  left: 70px;
+.arrow{
+  display: inline-block;
+  float: right;
 }
 .filter__list{
   display: none;
@@ -61,14 +62,17 @@
   }
 }
 
-
-
 .filter__list li{
   background-color: rgb(246, 227, 243);
-  padding: 5px;
+  padding: 10px;
+  border-top: cadetblue groove 1px;  
   color: black;
   cursor: pointer;
 }
+.filter__item:active{
+  background-color: rgb(230, 192, 224);
+}
+
 .filter__removed{
   display: none;
 }
