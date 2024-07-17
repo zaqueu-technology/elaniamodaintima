@@ -10,5 +10,6 @@ export function turnModal(source, alt){
   let span = document.querySelector('.close');
   span.addEventListener('click', ()=>{
     modal.style.display = 'none';
+    document.querySelector('html').classList.remove('body__overflow');
   })
 }

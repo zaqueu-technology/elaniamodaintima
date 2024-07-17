@@ -13,72 +13,39 @@
   width: 100%px;
   margin: 20px;
 }
+.body__overflow{
+  overflow: hidden;
+}
 .filter{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  margin: 20px;
+  justify-content: center;
 }
-.filter__button{
-  padding: 10px;
-  width: 215px;
-  text-align: center;
-  cursor: pointer;
-  background-color: rgb(246, 227, 243);
-  border: none;
-}
-.filter__button:focus{
-  outline: none; 
-  background-color: rgb(246, 227, 243);
-}
-.filter__button:active{
-  background-color: rgb(246, 227, 243);
-}
-.arrow{
-  display: inline-block;
-  float: right;
-}
-.filter__list{
-  display: none;
-  position: absolute;
-  width: 215px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  list-style: none;
-  list-style-type: none;
-  text-align: center;
-  padding: 0px;
-  background-color: rgb(161, 161, 164);
-  color: black;
-  margin-top: 0px;
-  animation: list-down 0.2s ease;
-}
+.filter__options{
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(98, 98, 98);
+  margin: 3px;
 
-@keyframes list-down {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
 }
-
-.filter__list li{
-  background-color: rgb(246, 227, 243);
+.filter__item{
   padding: 10px;
-  border-top: cadetblue groove 1px;  
-  color: black;
-  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  background-color: rgb(255, 168, 254);
+  border: 1px solid;
+  font-size: 20px;
+}
+.item__selected{
+  text-decoration: underline;
+  background-color: rgb(254, 137, 217);
 }
 .filter__item:active{
   background-color: rgb(230, 192, 224);
-}
-
-.filter__removed{
-  display: none;
 }
 
 .items-container{
@@ -125,6 +92,9 @@
   align-items: center;
   overflow: auto;
   height: 100%;
+}
+.items__pictures__container::-webkit-scrollbar {
+  display: none;
 }
 .items__picture{
   max-width: 80%;
@@ -241,6 +211,9 @@ a:active, a:focus,
   .items__element{
     height: 480px;
     width: 90vw;
+  }
+  .filter__item{
+    font-size: 10px;
   }
 }
 @media screen and (max-width: 390px) {

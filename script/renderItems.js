@@ -49,6 +49,7 @@ export function renderItems(arr){
     let imgMod = newItem.querySelector('.items__picture');
     imgMod.addEventListener('click', ()=>{
     turnModal(`${element.picture}`, `${element.title}`);
+    document.querySelector('html').classList.add('body__overflow');
   });
   });
 }

@@ -16,7 +16,6 @@ const filterArr = [
   new Filter('Modeladores', 'modelador'),
   new Filter('Camisolas', 'camisola'),
   new Filter('Fios', 'fio'),
-  new Filter('Calças', 'calça'),
   new Filter('Tangas', 'tanga'),
   new Filter('Babydolls', 'babydoll'),
   new Filter('Conjuntos', 'conjunto'),
@@ -28,64 +27,29 @@ const filterArr = [
   new Filter('Favoritos', 'favorito')
 ];
 
-const filterList = document.querySelector('.filter__list');
-const filterText = document.querySelector('.filter__text');
-const filterButton = document.querySelector('.filter__button');
-const filterChevron = document.querySelector('.arrow');
-
-let buttonDown = false;
-filterButton.addEventListener('click', ()=>{
-  if(!buttonDown){
-    filterList.style.display = 'block';
-    buttonDown = true;
-    filterChevron.classList.remove('bx-chevron-down');
-    filterChevron.classList.add('bx-chevron-up');
-  } else{
-    filterList.style.display = 'none';
-    buttonDown = false;
-    filterChevron.classList.remove('bx-chevron-up');
-    filterChevron.classList.add('bx-chevron-down');
-  }
-  
-
-})
+const filterList = document.querySelector('.filter__options');
 
 export function generateFilter(){
   filterArr.forEach(element =>{
-    let newItem = document.createElement('li');
+    let newItem = document.createElement('div');
     newItem.textContent = element.name;
+    if(element.name === 'Todos'){
+      newItem.classList.add('item__selected');
+    }
     newItem.classList.add('filter__item');
     filterList.appendChild(newItem);
 
-    if (element.name.toLowerCase() === 'todos') {
-      newItem.classList.add('filter__removed');
-      filterText.textContent = element.name;
-    }
-
-    let name  = element.name;
-    newItem.addEventListener('click', () =>{
-
-      filterList.style.display = 'none';
-      buttonDown = false;
-      filterChevron.classList.remove('bx-chevron-up');
-      filterChevron.classList.add('bx-chevron-down');
-
-      document.querySelectorAll('.filter__item').forEach(item => {
-        item.classList.remove('filter__removed');
+    newItem.addEventListener('click', ()=>{
+      let filteredArr = filterItems(element.category);
+      renderItems(filteredArr);
+      document.querySelector('.items-container').scrollIntoView({behavior: "smooth"});
+      let verifySelected = document.querySelectorAll('.filter__item');
+      verifySelected.forEach(element =>{
+        if(element.classList.contains('item__selected')){
+          element.classList.remove('item__selected');
+        }
       });
-
-      filterText.textContent = element.name;
-      newItem.classList.add('filter__removed');
-      
-      if (element.name.toLowerCase() === 'todos') {
-        renderItems(elements);
-      } else if(element.name === 'favorito'){
-        let filteredFavorites = filterItems('favorito');
-        renderItems(filteredFavorites);
-      }else {
-        const filteredItems = filterItems(element.category);
-        renderItems(filteredItems);
-      }
+      newItem.classList.add('item__selected')
     })
   })
 }
