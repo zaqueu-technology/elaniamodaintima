@@ -215,12 +215,14 @@ a:active, a:focus,
     grid-template-columns: repeat(3, 1fr);
   }
 }
+@media screen and (max-width: 420px) {
+  .filter__options{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (max-width: 390px) {
   .items__element{
     height: 450px;
     width: 90vw;
-  }
-  .filter__options{
-    grid-template-columns: repeat(2, 1fr);
   }
 }
