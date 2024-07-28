@@ -38,6 +38,7 @@
 }
 .filter__item{
   padding: 10px;
+  -webkit-user-select: none;
   user-select: none;
   text-align: center;
   background-color: rgb(255, 168, 254);
