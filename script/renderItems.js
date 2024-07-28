@@ -14,6 +14,16 @@ function shuffleArray(array) {
 }
 
 export function renderItems(arr){
+  let changeClassFav = document.querySelector('.items');
+  if (changeClassFav) {
+    if (changeClassFav.classList.contains('items__display__message')) {
+      changeClassFav.classList.remove('items__display__message');
+      changeClassFav.classList.add('items__display__grid');
+    }
+  } else {
+    console.error("Elemento com a classe 'item' não encontrado.");
+  }
+
   items.innerHTML = '';
   let shuffledArray = shuffleArray(arr);
   shuffledArray.forEach((element) => {
@@ -68,4 +78,16 @@ function favorite(item, element){
 
   localStorage.setItem('arrayItems', JSON.stringify(elements));
 }
- 
+
+export function noFavorites(){
+  items.innerHTML = 'Você ainda não favoritou nenhum item. Para favoritar um item, pressione o ícone <i class="bx bx-heart no__fav"></i> embaixo do item que deseja favoritar.';
+  let changeClassFav = document.querySelector('.items');
+  if (changeClassFav) {
+    if (changeClassFav.classList.contains('items__display__grid')) {
+      changeClassFav.classList.remove('items__display__grid');
+      changeClassFav.classList.add('items__display__message');
+    }
+  } else {
+    console.error("Elemento com a classe 'item' não encontrado.");
+  }
+}

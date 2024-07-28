@@ -1,5 +1,5 @@
 import { filterItems, itemsArr } from "./items.js";
-import { renderItems, elements } from "./renderItems.js";
+import { renderItems, elements, noFavorites } from "./renderItems.js";
 
 class Filter{
   constructor(name, category){
@@ -29,6 +29,20 @@ const filterArr = [
 
 const filterList = document.querySelector('.filter__options');
 
+function verifySelectedClass(){
+  let changeClassFav = document.querySelector(".item");
+
+  if (changeClassFav) {
+    if (changeClassFav.classList.contains('items__display__message')) {
+      changeClassFav.classList.remove('items__display__message');
+      changeClassFav.classList.add('items__display__grid');
+    }
+  } else {
+    console.error("Elemento com a classe 'item' não encontrado.");
+  }
+
+}
+
 export function generateFilter(){
   filterArr.forEach(element =>{
     let newItem = document.createElement('div');
@@ -41,15 +55,27 @@ export function generateFilter(){
 
     newItem.addEventListener('click', ()=>{
       let filteredArr = filterItems(element.category);
-      renderItems(filteredArr);
-      document.querySelector('.items-container').scrollIntoView({behavior: "smooth"});
-      let verifySelected = document.querySelectorAll('.filter__item');
-      verifySelected.forEach(element =>{
-        if(element.classList.contains('item__selected')){
-          element.classList.remove('item__selected');
-        }
-      });
-      newItem.classList.add('item__selected')
+      if(filteredArr.length === 0){
+        noFavorites();
+        let verifySelected = document.querySelectorAll('.filter__item');
+        verifySelected.forEach(element =>{
+          if(element.classList.contains('item__selected')){
+            element.classList.remove('item__selected');
+          }
+        });
+        newItem.classList.add('item__selected')
+      }else{
+        renderItems(filteredArr);
+        document.querySelector('.items-container').scrollIntoView({behavior: "smooth"});
+        let verifySelected = document.querySelectorAll('.filter__item');
+        verifySelected.forEach(element =>{
+          if(element.classList.contains('item__selected')){
+            element.classList.remove('item__selected');
+          }
+        });
+        newItem.classList.add('item__selected')
+      }
+      
     })
   })
 }

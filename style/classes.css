@@ -59,6 +59,9 @@
   padding: 5px;
 }
 .items{
+  
+}
+.items__display__grid{
   display: grid;
   gap: 5px;
   justify-items: center;
@@ -66,6 +69,13 @@
   grid-auto-rows: auto;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin: 5px;
+}
+.items__display__message{
+  display: block;
+  text-align: justify;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 20px;
 }
 .items__element{
   display: flex;
@@ -76,6 +86,10 @@
   align-items: center;
   justify-content: space-around;
   border: 1px solid;
+}
+.no__fav{
+  display: inline-block;
+  vertical-align: middle;
 }
 .items__title{
   text-align: center;
