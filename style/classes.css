@@ -73,9 +73,11 @@
 .items__display__message{
   display: block;
   text-align: justify;
-  line-height: 1.5;
+  line-height: 1.4;
   font-weight: 500;
   font-size: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .items__element{
   display: flex;
