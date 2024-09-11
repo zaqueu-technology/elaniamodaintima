@@ -28,7 +28,7 @@ export let itemsArr = [
     new Item('Calça infantil luxo', 'pictures/image-060055.jpeg', 'calcinha', 8),
     new Item('Sutiã tomara que caia', 'pictures/image-070055.jpeg', 'sutiã', 22),
     new Item('Sutiã fiona largo', 'pictures/image-080055.jpeg', 'sutiã', 25),
-    new Item('Pijama', 'pictures/image-090055.jpeg', 'pijama', 25),
+    new Item('Pijama', 'pictures/image-090055.jpeg', 'pijama', 27),
     new Item('Sutiã sem bojo alça esponjada', 'pictures/image-100055.jpeg', 'sutiã', 23),
     new Item('Tanga', 'pictures/image-110055.jpeg', 'tanga', 6),
     new Item('Calça pala microfibra', 'pictures/image-130055.jpeg', 'calcinha', 8.5),
@@ -73,7 +73,7 @@ export let itemsArr = [
     new Item('Calça reforçada', 'pictures/image-570055.jpeg', 'calcinha', 13),
     new Item('Camisola amamentação', 'pictures/image-580055.jpeg', 'camisola', 35),
     new Item('Robe', 'pictures/image-590055.jpeg', 'robe', 37),
-    new Item('Pijama', 'pictures/image-600055.jpeg', 'pijama', 25),
+    new Item('Pijama', 'pictures/image-600055.jpeg', 'pijama', 27),
     new Item('Sutiã alça esponjada', 'pictures/image-610055.jpeg', 'sutiã', 25),
     new Item('Babydoll microfibra', 'pictures/image-620055.jpeg', 'babydoll', 37),
     new Item('Calça algodão', 'pictures/image-640055.jpeg', 'calcinha', 7.5),
@@ -108,6 +108,8 @@ export let itemsArr = [
     new Item('Box infantil romantique', 'pictures/image-121.jpeg', 'cueca', 5.5),
     new Item('Calça infantil romantique', 'pictures/image-122.jpeg', 'calcinha', 3.5),
     new Item('Calça algodão', 'pictures/image-123.jpeg', 'calcinha', 6),
+    new Item('Camisola suede', 'pictures/image-124.jpeg', 'camisola', 21),
+    new Item('Box poliamida infantil', 'pictures/image-125.jpeg', 'cueca', 8),
     new Item('Sutiã amamentação', 'pictures/image-1111.jpeg', 'sutiã', 23),
 ];
 
