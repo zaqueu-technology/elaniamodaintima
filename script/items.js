@@ -13,7 +13,7 @@ class Item {
 
 export function sendMessage(item) {
   let text =
-    "Olá! Dei uma olhada no seu catálogo. Gostaria de saber mais sobre o produto ";
+    "Olá! Dei uma olhada no seu catálogo e gostaria de saber mais sobre o produto ";
   let linkText = `<a href='https://wa.me/5584991458984?text=${text}'>`;
 }
 
