@@ -15,7 +15,6 @@ function shuffleArray(array) {
 }
 
 export function renderItems(arr) {
-  localStorage.clear();
   let changeClassFav = document.querySelector(".items");
   if (changeClassFav) {
     if (changeClassFav.classList.contains("items__display__message")) {
