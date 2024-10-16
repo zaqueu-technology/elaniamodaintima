@@ -256,6 +256,12 @@ export let itemsArr = [
   new Item("Calça algodão", "pictures/image-123.jpeg", "calcinha", 6),
   new Item("Camisola suede", "pictures/image-124.jpeg", "camisola", 21),
   new Item("Box poliamida infantil", "pictures/image-125.jpeg", "cueca", 8),
+  new Item(
+    "Calça cós virado em microfibra",
+    "pictures/image-126.jpeg",
+    "calcinha",
+    6.5
+  ),
   new Item("Sutiã amamentação", "pictures/image-1111.jpeg", "sutiã", 23),
 ];
 

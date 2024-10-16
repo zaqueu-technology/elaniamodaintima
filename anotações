@@ -1,0 +1,3 @@
+quando o usuário entrar, o array que vai ser mostrado tem que receber os preços do array inicial do items.js e os dados de favorito ou não do localStorage
+
+pensei em fazer algo com extensão de array [elemento..., favorito = localStorage.favorito]
