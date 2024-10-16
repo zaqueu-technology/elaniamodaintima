@@ -263,6 +263,7 @@ export let itemsArr = [
     6.5
   ),
   new Item("Sutiã amamentação", "pictures/image-1111.jpeg", "sutiã", 23),
+  new Item("teste", "pictures/image-1111.jpeg", "cueca", 23),
 ];
 
 function itemsEqual(item1, item2) {
