@@ -2,6 +2,7 @@ import { itemsArr } from "./items.js";
 import { turnModal } from "./modal.js";
 
 const items = document.querySelector(".items");
+localStorage.clear();
 export let elements =
   JSON.parse(localStorage.getItem("arrayItems")) || itemsArr;
 
