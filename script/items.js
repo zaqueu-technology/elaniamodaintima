@@ -129,7 +129,6 @@ export let itemsArr = [
     "calcinha",
     7
   ),
-  new Item("Calça coton pala", "pictures/image-440055.jpeg", "calcinha", 7),
   new Item("Calça box", "pictures/image-450055.jpeg", "calcinha", 8),
   new Item("Calça conforto", "pictures/image-460055.jpeg", "calcinha", 7.5),
   new Item("Fio duplo", "pictures/image-470055.jpeg", "fio", 6),
@@ -263,7 +262,6 @@ export let itemsArr = [
     6.5
   ),
   new Item("Sutiã amamentação", "pictures/image-1111.jpeg", "sutiã", 23),
-  new Item("teste", "pictures/image-1111.jpeg", "cueca", 25),
 ];
 
 function itemsEqual(item1, item2) {
